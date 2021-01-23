@@ -17,6 +17,7 @@ const removeUser = () => {
     };
 };
 
+
 // Call API to login, then set session user from response
 // Thunk action for POST/api/session
 export const login = (user) => async (dispatch) => {
@@ -34,6 +35,27 @@ export const login = (user) => async (dispatch) => {
     dispatch(setUser(response.data.user));
     return response;
 };
+
+export const restore = () => async (dispatch) => {
+    const response = await fetch('/api/session');
+    dispatch(setUser(response.data.user));
+    return response;
+};
+
+export const signup = (user) => async (dispatch) => {
+  const { username, email, password } = user;
+  const response = await fetch("/api/users", {
+    method: "POST",
+    body: JSON.stringify({
+      username,
+      email,
+      password,
+    }),
+  });
+  dispatch(setUser(response.data.user));
+  return response;
+};
+
 // By default, no session user in session slice of state
 const initialState = {user: null};
 // Reducer will hold current session user's information 
