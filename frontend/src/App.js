@@ -13,21 +13,22 @@ function App() {
     dispatch(sessionActions.restore()).then(() => setIsLoaded(true))
   }, [dispatch]);
 
-  return isLoaded && (
-    <Switch>
-      <Route path="/login">
-        <LoginFormPage />
-      </Route>
-      <Route path="/signup">
-        <SignupFormPage />
-      </Route>
-      <Route path="/">
-        <Navigation />
-      </Route>
-    </Switch>
+  return (
+    <> 
+      <Navigation isLoaded={isLoaded} />
+      {isLoaded && (
+        <Switch>
+          <Route path="/login">
+            <LoginFormPage />
+          </Route>
+          <Route path="/signup">
+            <SignupFormPage />
+          </Route>
+        </Switch>
+      )}
+    </>
   );
 }
-
 
 export default App;
 
