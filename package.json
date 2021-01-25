@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CJNewcomer/authenticate-me.git"
+    "url": "git+https://github.com/CJNewcomer/scarebnb.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CJNewcomer/authenticate-me/issues"
+    "url": "https://github.com/CJNewcomer/scarebnb/issues"
   },
-  "homepage": "https://github.com/CJNewcomer/authenticate-me#readme"
+  "homepage": "https://github.com/CJNewcomer/scarebnb#readme"
 }
