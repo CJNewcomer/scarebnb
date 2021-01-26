@@ -1,1 +1,9 @@
-/* TODO Add site wide styles */
+ body {
+     background-image: url("https://cdn.pixabay.com/photo/2015/05/28/08/02/paper-787651_1280.jpg");
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+ }
+ 
+
