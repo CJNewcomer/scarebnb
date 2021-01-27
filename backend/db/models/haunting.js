@@ -39,7 +39,13 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   Haunting.associate = function(models) {
-    // associations can be defined here
+    Haunting.hasMany(models.UserHaunting, {foreignKey: 'hauntingId'});
+    const columnMapping = {
+      through: 'UserHaunting',
+      otherKey: 'userId',
+      foreignKey: 'hauntingId'
+    }
+    Haunting.belongsToMany(models.User, columnMapping);
   };
   return Haunting;
 };
