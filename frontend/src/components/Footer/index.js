@@ -1,7 +1,9 @@
+import './footer.css';
+
 function Footer() {
     return (
         <div className='footer'>
-            <p>Github · LinkedIn</p>
+            <div>Github · LinkedIn</div>
         </div>
     )
 }
