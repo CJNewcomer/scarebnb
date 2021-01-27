@@ -7,10 +7,11 @@ export const setHauntingsProfile = (payload) => ({
     payload,
 });
 
-export const getHauntingsProfile = () => async (dispatch) => {
-    const res = await fetch('/api/hauntings');
+export const getHauntingsProfile = (id) => async (dispatch) => {
+    console.log('Thunk running')
+    const res = await fetch(`/api/hauntings/${id}`);
     if (res.ok) {
-        dispatch(setHauntingsProfile(res.data.hauntings))
+        dispatch(setHauntingsProfile(res.data.haunting))
         return res;
     }
 }
@@ -18,9 +19,11 @@ export const getHauntingsProfile = () => async (dispatch) => {
 const initialState = {};
 
 const hauntingsReducer = (state = initialState, action) => {
+    const newState = Object.assign({}, state);
     switch (action.type) {
         case SET_HAUNTINGS_PROFILE:
-            return {...state};
+            newState[action.payload.id] = action.payload;
+            return newState;
         default:
             return state;
     }

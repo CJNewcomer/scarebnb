@@ -15,10 +15,13 @@ function App() {
     dispatch(sessionActions.restore()).then(() => setIsLoaded(true))
   }, [dispatch]);
 
+  if (!isLoaded) {
+    return <p>Loading...</p>
+  }
+
   return (
     <> 
       <Navigation isLoaded={isLoaded} />
-      {isLoaded && (
         <Switch>
           <Route path="/login">
             <LoginFormPage />
@@ -33,7 +36,6 @@ function App() {
             <Footer />
           </Route>
         </Switch>
-      )}
     </>
   );
 }
