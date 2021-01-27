@@ -6,6 +6,7 @@ import SignupFormPage from './components/SignupFormPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import HauntingProfile from './components/HauntingProfile';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,10 +15,13 @@ function App() {
     dispatch(sessionActions.restore()).then(() => setIsLoaded(true))
   }, [dispatch]);
 
+  if (!isLoaded) {
+    return <p>Loading...</p>
+  }
+
   return (
     <> 
       <Navigation isLoaded={isLoaded} />
-      {isLoaded && (
         <Switch>
           <Route path="/login">
             <LoginFormPage />
@@ -25,11 +29,13 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route path="/hauntings/:id" >
+            <HauntingProfile />
+          </Route>
           <Route>
             <Footer />
           </Route>
         </Switch>
-      )}
     </>
   );
 }

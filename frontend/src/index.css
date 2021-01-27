@@ -1,4 +1,5 @@
  body {
+     height: 100%;
      background-image: url("https://cdn.pixabay.com/photo/2015/05/28/08/02/paper-787651_1280.jpg");
      background-repeat: no-repeat;
      background-attachment: fixed;
@@ -6,4 +7,9 @@
      background-size: cover;
  }
  
+ .root {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+ }
 
