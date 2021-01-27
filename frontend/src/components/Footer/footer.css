@@ -1,20 +1,18 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    margin-top: auto;
     border: 1px solid rgb(54, 51, 51);
     background-color: rgb(231, 211, 184);
-    border-radius: 5px;
-    text-align: center;
+    border-radius: 25px;
     padding-left: 300px;
     padding-right: 300px;
-    margin-top: 700px;
-    
+}
 
+.footer__links {
+    width: 100%;
 }
 
 .footer > div {
+    text-align: center;
     padding: 5px;
     font-size: 14px;
-
 }

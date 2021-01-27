@@ -3,7 +3,9 @@ import './footer.css';
 function Footer() {
     return (
         <div className='footer'>
-            <div>Github · LinkedIn</div>
+            <div className='footer__links'>
+                <div>Github · LinkedIn</div>
+            </div>
         </div>
     )
 }

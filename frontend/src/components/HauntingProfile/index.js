@@ -1,9 +1,9 @@
-
+import './HauntingProfile.css';
 
 function HauntingProfile({ imgPath, locationName, address, city, state, country, price, description}) {
     return (
         <div className='spot'>
-            <img src={imgPath} alt=""/>
+            <img src={imgPath} alt="Haunting"/>
             <div className='spot__info'>
                 <h2>{locationName}</h2>
                 <h3>{address}</h3>

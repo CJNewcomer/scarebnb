@@ -1,0 +1,28 @@
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(231, 211, 184);
+    background-color: rgb(231, 211, 184);
+    border-radius: 25px;
+}
+
+.nav-bar__home {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.nav-bar__log {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar__sign {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
