@@ -7,9 +7,9 @@ export const setUserHauntings = (payload) => ({
     payload,
 });
 
-export const getUserHauntings = (id) => async (dispatch) => {
+export const getUserHauntings = () => async (dispatch) => {
     console.log('Booking Thunk running')
-    const res = await fetch(`/api/userhauntings/hauntings/${id}`);
+    const res = await fetch(`/api/userhauntings`);
     if (res.ok) {
         dispatch(setUserHauntings(res.data.userHaunting))
         return res;
@@ -32,7 +32,7 @@ const userHauntingsReducer = (state = initialState, action) => {
     const newState = Object.assign({}, state);
     switch (action.type) {
         case SET_USERHAUNTINGS:
-            newState[action.payload.id] = action.payload;
+            newState[action.payload] = action.payload;
             return newState;
         default:
             return state;
