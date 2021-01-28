@@ -7,6 +7,7 @@ import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HauntingProfile from './components/HauntingProfile';
+import './index.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -32,10 +33,8 @@ function App() {
           <Route path="/hauntings/:id" >
             <HauntingProfile />
           </Route>
-          <Route>
-            <Footer />
-          </Route>
         </Switch>
+       <Footer /> 
     </>
   );
 }
