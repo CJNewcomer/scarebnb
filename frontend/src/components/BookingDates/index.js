@@ -1,13 +1,15 @@
-import { useHistory, useState } from 'react-router-dom';
+import { useState } from 'react'
 import { DateRangePicker } from "react-date-range";
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import { Button } from "@material-ui/core";
 import PeopleIcon from "@material-ui/icons/People";
-import "./SearchBar.css"
+import "./BookingDates.css"
 
-function SearchBar() {
-    const history = useHistory();
+function BookingDates() {
     const [ bookingStartDate, setBookingStartDate ] = useState(new Date());
     const [ bookingEndDate, setBookingEndDate ] = useState(new Date());
+    // const history = useHistory();
     
     const selectionRange = {
         bookingStartDate: bookingStartDate,
@@ -21,14 +23,16 @@ function SearchBar() {
     }
 
     return (
-        <div className="search__container">
+        <div className="date__container">
             <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} /> 
                 <h2>
                     Number of victims <PeopleIcon />
                 </h2>
                 <input min={0} defaultValue={2} type="number" />
-                <Button onClick={() => history.push('/search')}>Search scarebnb</Button>
+                <Button>Search scarebnb</Button>
         </div>
     )
 }
-export default SearchBar;
+export default BookingDates;
+
+// onClick={() => history.push('/search')}

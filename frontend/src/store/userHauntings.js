@@ -16,17 +16,7 @@ export const getUserHauntings = () => async (dispatch) => {
     }
 }
 
-const initialState = {
-    1: {
-        id: 1,
-        userId: 2,
-        hauntingId: 7,
-        statusId: 1,
-        bookingStartDate: '2021-02-01',
-        bookingEndDate: '2021-02-04',
-        rating: 3,
-    }
-}
+const initialState = {};
 
 const userHauntingsReducer = (state = initialState, action) => {
     const newState = Object.assign({}, state);
