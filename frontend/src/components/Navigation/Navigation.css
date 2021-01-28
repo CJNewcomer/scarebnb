@@ -1,15 +1,19 @@
 
 .nav__container {
     display: flex;
+    flex-direction: row;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid rgb(231, 211, 184);
+    width: 100%;
+    top: 0;
     background-color: rgb(231, 211, 184);
     border-radius: 25px;
 }
 
 .nav-bar__home {
     display: flex;
+    margin-left: 5%;
     padding-left: 10px;
     padding-right: 10px;
     
@@ -17,6 +21,7 @@
 
 .nav-bar__log {
     display: flex;
+    justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
 }

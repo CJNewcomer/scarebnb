@@ -1,15 +1,13 @@
- body {
-     height: 100%;
+ /* body {
+     height: 100vh;
      background-image: url("https://cdn.pixabay.com/photo/2015/05/28/08/02/paper-787651_1280.jpg");
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-position: center;
      background-size: cover;
- }
- 
- .root {
-     height: 100%;
-     display: flex;
-     flex-direction: column;
- }
-
+ } */
+body {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+}
