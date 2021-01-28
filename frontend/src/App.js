@@ -6,6 +6,7 @@ import SignupFormPage from './components/SignupFormPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import Landing from './components/Landing';
 import HauntingProfile from './components/HauntingProfile';
 import './index.css';
 
@@ -24,6 +25,9 @@ function App() {
     <> 
       <Navigation isLoaded={isLoaded} />
         <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
           <Route path="/login">
             <LoginFormPage />
           </Route>

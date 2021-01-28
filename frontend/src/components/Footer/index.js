@@ -8,7 +8,7 @@ function Footer() {
                     <a className='github' href="https://github.com/CJNewcomer">
                         <i className="fab fa-github-square"></i>
                     </a>
-                    <a className='linkedin' href="https://http://linkedin.com/in/courtney-newcomer-gray-474b0923">
+                    <a className='linkedin' href="https://linkedin.com/in/courtney-newcomer-gray-474b0923">
                         <i className="fab fa-linkedin"></i>
                     </a>
                 </div>
