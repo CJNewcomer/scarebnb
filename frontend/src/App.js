@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import HauntingProfile from './components/HauntingProfile';
 import './index.css';
-
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);

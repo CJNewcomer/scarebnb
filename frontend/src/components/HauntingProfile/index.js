@@ -24,7 +24,7 @@ function HauntingProfile() {
                 <h2>{locationName}</h2>
                 <h3>{address}</h3>
                 <h3>{city}, {state} {country}</h3>
-                <h4>{price} / night </h4>
+                <h4>{price}</h4>
                 <h4>{description}</h4>
             </div>
         </div>
