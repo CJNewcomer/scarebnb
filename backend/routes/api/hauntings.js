@@ -17,4 +17,10 @@ router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
     res.json({haunting});
 }));
 
+router.get('/', asyncHandler(async(req, res) => {
+    const hauntings = await Haunting.findAll({ limit: 4 });
+    res.json(hauntings);
+})),
+
+
 module.exports = router;
