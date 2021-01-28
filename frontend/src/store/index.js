@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 //import reducer from session into file w/root reducer
 import sessionReducer from './session';
 import hauntingsReducer from './hauntings';
+import userHauntingsReducer from './userHauntings';
 
 const rootReducer = combineReducers({
   // Set key of session to session reducer
   session: sessionReducer,
   hauntings: hauntingsReducer,
+  userHauntings: userHauntingsReducer,
 });
 
 let enhancer;
