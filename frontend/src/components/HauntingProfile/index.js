@@ -47,8 +47,8 @@ function HauntingProfile() {
                     <h2>{locationName}</h2>
                     <h3>{address}</h3>
                     <h3>{city}, {state} {country}</h3>
-                    <h4>{price}</h4>
-                    <h4>{description}</h4>
+                    <h4 className='price'>{price} / Night </h4>
+                    <h4 className='description'>{description}</h4>
                 </div>
                 <div className="book__now">
                     <button onClick={openCalendar}>Book

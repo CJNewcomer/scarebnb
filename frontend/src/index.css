@@ -37,7 +37,7 @@ body {
 
 .nav-bar__log, .nav-bar__sign{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
     padding-left: 10px;
@@ -45,9 +45,9 @@ body {
 }
 
 .footer {
-    position: fixed;
     z-index: 100;
     display: block;
+    position: fixed;
     width: 100%;
     background-color: whitesmoke;
     bottom: 0;
@@ -74,19 +74,4 @@ p {
 i.fab {
    color: black; 
    margin: 0 10px;
-}
-
-@media (max-width: 600px) {
-   body {
-    margin: auto;
-   }
-   img{
-       max-width:fit-content;
-   }
-   form{
-       max-width: fit-content;
-   }
-   div {
-       max-width: fit-content;
-   }
 }
