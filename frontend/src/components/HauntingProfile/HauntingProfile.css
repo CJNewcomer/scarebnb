@@ -14,7 +14,7 @@
 .spot > img {
   flex-direction: column;
   justify-content: left;
-  object-fit: fill;
+  object-fit: cover;
   min-width: 300px;
   min-height: 250px;
   text-align: center;
@@ -36,12 +36,24 @@
     font-weight: 600;
 }
   
-.spot__info > h4 {
+h4.description {
     font-size: 14px;
-    font-weight: 300;
+    font-family: 'Esteban', serif;
+    font-weight: 500;
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+h4.price {
+  height: 5px;
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display SC', serif;
+}
+
 
 .book__now {
 
