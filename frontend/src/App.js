@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import HauntingProfile from './components/HauntingProfile';
 import './index.css';
+import SearchBar from './components/SearchBar';
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,6 +28,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Landing />
+            <SearchBar placeholder='Search...if you dare' handleChange={(e) => console.log(e)} />
           </Route>
           <Route path="/login">
             <LoginFormPage />
