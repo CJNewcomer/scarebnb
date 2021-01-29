@@ -14,7 +14,7 @@
 .spot > img {
   flex-direction: column;
   justify-content: left;
-  object-fit: fill;
+  object-fit: cover;
   min-width: 300px;
   min-height: 250px;
   text-align: center;
