@@ -26,14 +26,14 @@
     border: 1;
   }
 
-  .card__info > h2 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  .card__info > h3 {
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
+.card__info > h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__info > h3 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

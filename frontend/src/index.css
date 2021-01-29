@@ -7,18 +7,24 @@ body {
     overflow-x: hidden;
 }
 
+#root {
+    height: 200%;
+}
+
 .nav__container {
     display: flex;
-    flex-direction: row;
+    list-style: none;
     margin: auto;
     width: 100%;
     top: 0;
-    background-color: rgb(231, 211, 184);
+    height: 15px;
+    background-color: whitesmoke;
 }
 
 .nav-bar__home {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
     margin-left: 5%;
@@ -37,14 +43,14 @@ body {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     display: block;
     width: 100%;
     background-color: whitesmoke;
-    padding: 0rem 10rem;
     bottom: 0;
     margin: auto;
-    height: 100px;
+    height: 80px;
 }
 
 .footer__developer {
@@ -52,6 +58,7 @@ body {
 }
 
 p {
+    font-family: 'Playfair Display SC', serif;
     text-align: center;
     font-size: 16px;
     color: black;
@@ -64,5 +71,5 @@ p {
 
 i.fab {
    color: black; 
-   margin: 0 10px 150px;
+   margin: 0 10px;
 }
