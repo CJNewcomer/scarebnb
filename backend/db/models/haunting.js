@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   }, {});
   Haunting.associate = function(models) {
     Haunting.hasMany(models.UserHaunting, {foreignKey: 'hauntingId'});
