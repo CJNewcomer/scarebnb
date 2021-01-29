@@ -49,13 +49,13 @@ function HauntingProfile() {
                     <h3>{city}, {state} {country}</h3>
                     <h4 className='price'>{price} / Night </h4>
                     <h4 className='description'>{description}</h4>
-                </div>
-                <div className="book__now">
-                    <button onClick={openCalendar}>Book
-                        <i className="fas fa-book-dead"></i>Now
-                    </button>
-                {showCalendar && <BookingDates /> } 
-                </div>  
+                    <div className="book__now">
+                        <button onClick={openCalendar}>Book
+                            <i className="fas fa-book-dead"></i>Now
+                        </button>
+                    {showCalendar && <BookingDates /> } 
+                    </div>  
+                </div>    
             </div>   
         </>    
     )

@@ -3,11 +3,11 @@
   width: 60%;
   margin: auto;
   padding: 25px 25px;
+  margin-top: 100px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
-  cursor: pointer;
   text-align: left;
 }
 
@@ -27,7 +27,7 @@
     margin-top: -5.5px;
     border-radius: 10px;
     padding: 20px;
-    padding-top: 20px;
+    padding-top: 15px;
     border: 1;
 }
 
@@ -36,6 +36,13 @@
     font-weight: 600;
 }
   
+h4.price {
+  font-family: 'Esteban', serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding-bottom: 3px;
+}
+
 h4.description {
     font-size: 14px;
     font-family: 'Esteban', serif;
@@ -44,21 +51,24 @@ h4.description {
     margin-bottom: 8px;
 }
 
-h4.price {
-  height: 5px;
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
 h2, h3 {
   font-family: 'Playfair Display SC', serif;
 }
 
-
 .book__now {
-
+  display: flex;
+  justify-content: center;
 }
 
 button {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: 600;
+  font-family: 'Playfair Display SC', serif;
+  cursor: pointer;
+}
 
+i.fas {
+  padding-left: 15px;
+  padding-right: 15px;
 }

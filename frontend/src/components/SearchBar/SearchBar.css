@@ -1,0 +1,28 @@
+.search__header {
+    display: inline-block;
+    position: relative;
+    margin-left: 4rem;
+    z-index: 3;
+}
+
+.search__header > button {
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.search {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.search__mount {
+    width: 100%;
+}
+
+.search__container {
+    position: relative;
+    box-sizing: border-box;
+}
+

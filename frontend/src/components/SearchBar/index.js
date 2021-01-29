@@ -1,0 +1,7 @@
+const SearchBar = () => {
+    return (
+        <>
+            
+        </>
+    )
+}
