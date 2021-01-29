@@ -1,32 +1,37 @@
 .spot {
-  margin: 10px;
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 25px 25px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   cursor: pointer;
-}
-
-.spot:hover {
-  transform: scale(1.07);
+  text-align: left;
 }
 
 .spot > img {
+  flex-direction: column;
+  justify-content: left;
   object-fit: fill;
   min-width: 300px;
-  min-height: 200px;
+  min-height: 250px;
+  text-align: center;
   width: 100%;
+  margin: 5.5px 20px 10px 0;
+  border-radius: 5px;
 }
 
 .spot__info {
-    margin-top: -9px;
+    margin-top: -5.5px;
     border-radius: 10px;
     padding: 20px;
     padding-top: 20px;
     border: 1;
 }
 
-.spot__info > h2 {
+.spot__info > h2, h3 {
     font-size: 18px;
     font-weight: 600;
 }
@@ -36,4 +41,12 @@
     font-weight: 300;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+.book__now {
+
+}
+
+button {
+
 }
