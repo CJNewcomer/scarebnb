@@ -57,6 +57,23 @@ router.post(
   }),
 );
 
+// Demo User
+router.post('/demo', asyncHandler(async(req, res) => {
+  const { credential, password } = req.body;
+
+  const demoUser = await User.login({
+    credential,
+    password,
+  });
+
+  await setTokenCookie(res, demoUser);
+
+  return res.json({
+    demoUser: demoUser.toSafeObject(),
+    });
+  }),
+);
+
 // Log out
 router.delete(
   '/',
