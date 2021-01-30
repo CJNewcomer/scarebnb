@@ -72,7 +72,7 @@ export const demoLogin = () => async (dispatch) => {
             password: 'demoUser123',
         }),
     });
-    dispatch(setUser(response.data.user));
+    dispatch(setUser(response.data.demoUser));
     return response;
 };
 // By default, no session user in session slice of state
