@@ -3,7 +3,6 @@ import { fetch } from './csrf';
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser'
 
-
 const setUser = (user) => {
     return {
         type: SET_USER,
@@ -36,6 +35,7 @@ export const login = (user) => async (dispatch) => {
     return response;
 };
 
+
 export const restore = () => async (dispatch) => {
     const response = await fetch('/api/session');
     dispatch(setUser(response.data.user));
@@ -43,17 +43,17 @@ export const restore = () => async (dispatch) => {
 };
 
 export const signup = (user) => async (dispatch) => {
-  const { username, email, password } = user;
-  const response = await fetch("/api/users", {
-    method: "POST",
-    body: JSON.stringify({
-      username,
-      email,
-      password,
-    }),
-  });
-  dispatch(setUser(response.data.user));
-  return response;
+    const { username, email, password } = user;
+    const response = await fetch("/api/users", {
+        method: "POST",
+        body: JSON.stringify({
+            username,
+            email,
+            password,
+        }),
+    });
+    dispatch(setUser(response.data.user));
+    return response;
 };
 
 export const logout = () => async (dispatch) => {
@@ -64,6 +64,17 @@ export const logout = () => async (dispatch) => {
     return response;
 };
 
+export const demoLogin = () => async (dispatch) => {
+    const response = await fetch('/api/session/demo', {
+        method: 'POST',
+        body: JSON.stringify({
+            credential: 'demoUser',
+            password: 'demoUser123',
+        }),
+    });
+    dispatch(setUser(response.data.user));
+    return response;
+};
 // By default, no session user in session slice of state
 const initialState = {user: null};
 // Reducer will hold current session user's information 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal'; 
@@ -17,32 +16,32 @@ function Navigation({ isLoaded }) {
             </div>
         );
     } else {
-            <li>
-                <NavLink className='.nav-bar__home' exact to='/'>
-                   <i class="fas fa-house-damage" />
-                </NavLink>
-            </li>
+            <div className='.navbar__home'>
+                <a className='home' href='/'>
+                    <i class="fas fa-house-damage"></i>
+                </a>
+            </div>
 
         sessionLinks = (
-            <div>
-                <ul className='nav-bar__links'>
-                    <LoginFormModal /> 
-                    <SignUpFormModal />
-                </ul>
-            </div>    
+            <>
+                <div className='navbar__login'>
+                        <LoginFormModal /> 
+                </div>
+                <div className='navbar__signup'>
+                        <SignUpFormModal />
+                </div> 
+            </>  
         );
     }
 
     return (
-        <nav className='nav__container'>
-            <ul className='nav__links'>
-                <div className='nav__container'>
-                    
-                    {isLoaded && sessionLinks}
-                        
-                </div>
-            </ul>        
-        </nav>
+    
+        <div className='nav__container'>
+            
+            {isLoaded && sessionLinks}
+                
+        </div>       
+        
     );    
 }
 
