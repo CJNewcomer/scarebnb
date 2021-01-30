@@ -25,31 +25,39 @@ const LoginForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <ul>
-            {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-            </ul>
-            <div>
-                <label>
-                Username or Email
-                <input
-                    type="text"
-                    value={credential}
-                    onChange={(e) => setCredential(e.target.value)}
-                    required
-                /> <br></br>
-                </label>
-                <label>
-                Password
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                </label>
+        <form className='form__login' onSubmit={handleSubmit}>
+            <div className='form__content'>
+                <ul className='error-list'>
+                {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+                </ul>
+                <div className='form__input'>
+                    <label>
+                    Username or Email
+                    <input
+                        className='form__input-text'
+                        type="text"
+                        value={credential}
+                        onChange={(e) => setCredential(e.target.value)}
+                        required
+                    /> <br></br>
+                    </label>
+                </div>
+                <div className='form__input'>
+                    <label>
+                    Password
+                    <input
+                        className='form__input-text'
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    </label>
+                </div>
+                <div className='form__button'>
+                    <button className='form__button-submit' type="submit">Log In</button>
+                </div>
             </div>
-            <button type="submit">Log In</button>
         </form>
     );
 }

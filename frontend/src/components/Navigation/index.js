@@ -3,11 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal'; 
+import SignUpFormModal from '../SignupFormModal';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
-    // if a valid session, allow user to access /login and /signup
+
     let sessionLinks;
+    
     if (sessionUser) {
         sessionLinks = (
             <div>
@@ -15,28 +17,32 @@ function Navigation({ isLoaded }) {
             </div>
         );
     } else {
+            <li>
+                <NavLink className='.nav-bar__home' exact to='/'>
+                   <i class="fas fa-house-damage" />
+                </NavLink>
+            </li>
+
         sessionLinks = (
-            <>
-                <nav className='nav-bar__log'>
-                    <LoginFormModal />
-                    <NavLink to="/signup">Sign Up</NavLink>
-                </nav>
-            </>
+            <div>
+                <ul className='nav-bar__links'>
+                    <LoginFormModal /> 
+                    <SignUpFormModal />
+                </ul>
+            </div>    
         );
     }
 
     return (
-        <div className='nav__container'>
-            <ul>
-                <li>
-                    <NavLink exact to="/">Home</NavLink>
-                        <nav className='nav-bar__home'>
-                            {isLoaded && sessionLinks}
-                    </nav>
-                </li>    
+        <nav className='nav__container'>
+            <ul className='nav__links'>
+                <div className='nav__container'>
+                    
+                    {isLoaded && sessionLinks}
+                        
+                </div>
             </ul>        
-        </div>
-        
+        </nav>
     );    
 }
 

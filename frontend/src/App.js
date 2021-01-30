@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import SignupFormPage from './components/SignupFormPage';
+import SignupForm from './components/SignupFormModal';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -29,10 +29,13 @@ function App() {
             <Landing />
           </Route>
           <Route path="/signup">
-            <SignupFormPage />
+            <SignupForm />
           </Route>
           <Route path="/hauntings/:id" >
             <HauntingProfile />
+          </Route>
+          <Route>
+            404 - Page Not Found
           </Route>
         </Switch>
        <Footer /> 

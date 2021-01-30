@@ -1,4 +1,4 @@
-.form__login{
+.form__signup{
     margin:auto;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     background-color: whitesmoke;
 }
 
-.form__content{
+.form__container{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -15,9 +15,10 @@
 .error-list {
     margin: auto;
     list-style: none;
-    color: rgb(143, 18, 18);
+    color: rgb(143, 18, 18);;
     text-align: center;
     padding: .5rem rem;
+  
 }
 
 label {
@@ -26,22 +27,23 @@ label {
     letter-spacing: 1px;
 }
 
-.form__input {
+.form__input{
     margin: .2rem;
 }
 
-.form__input-text {
+.form__input-text{
     color: #333333;
     border-radius: 5px;
     border: .15px solid rgb(11,12,15);
     padding: .3rem;
 }
 
-.form__button {
+.form__button{
     align-self: center;
+    
 }
 
-.form__button-submit {
+.form__button-submit{
     padding: 5px 20px;
     background-color: rgb(197,198,200);
     border-radius: 5px;
