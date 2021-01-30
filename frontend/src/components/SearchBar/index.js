@@ -1,10 +1,9 @@
-const SearchBar = (props) => {
-    return (
-        <input type='search'
-        className='search'
-        placeholder={props.placeholder}
-        onChange = {props.handleChange} />
-    )
-}
+// const SearchBar = () => {
+//     return (
+//         <div>
+          
+//         </div>    
+//     )
+// }
 
-export default SearchBar;
+// export default SearchBar;

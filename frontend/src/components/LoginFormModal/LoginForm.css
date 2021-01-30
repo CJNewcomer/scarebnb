@@ -1,0 +1,20 @@
+.login {
+    background-color: whitesmoke;
+}
+.login__forms {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+
+}
+.login__errors {
+    color: rgb(143, 18, 18);
+    align-self: center;
+    text-align: center;
+    padding: 1em;
+}
+.login__exit {
+
+    align-self: center;
+    justify-self: center;
+}

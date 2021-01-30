@@ -3,7 +3,6 @@ div.main {
     height: 100%;
     display: block;
     position: relative;
-    padding: 30px;
 }
 
 div.main ::after {
@@ -22,7 +21,12 @@ div.main ::after {
     z-index: -1;
 }
 
+.main__layout {
+    padding-top: 60px;
+}
+
 h1 {
     font-family: 'Playfair Display SC', serif;
     letter-spacing: 2px; 
+    font-size: 40px;
 }
