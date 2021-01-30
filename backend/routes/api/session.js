@@ -61,9 +61,7 @@ router.post(
 router.post('/demo', asyncHandler(async(req, res) => {
   const { credential, password } = req.body;
 
-  const demoUser = await User.login({
-    credential,
-    password,
+  const demoUser = await User.login({credential,password
   });
 
   await setTokenCookie(res, demoUser);
