@@ -1,8 +1,8 @@
-import { id } from 'date-fns/locale';
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 import { getMultipleHauntings } from '../../store/hauntings';
+import { useSearchContext } from '../context/SearchContext';
 
 const SearchResults = () => {
     const dispatch = useDispatch();
@@ -17,6 +17,13 @@ const SearchResults = () => {
         dispatch(getMultipleHauntings())
     }, [dispatch])
    
+    const {setInput} = useSearchContext();
+
+    useEffect(() => {
+        setInput('');
+    }, [setInput]);
+
+
     return (
         <div className='search__wrapper'>
             <div className='search__results'>
@@ -29,7 +36,7 @@ const SearchResults = () => {
                             <img src={imgPath} alt="" />
                             <div className="card__info">
                                 <h2>{locationName}</h2>
-                                <h3>{price}</h3>
+                                <h3>{price} / Night</h3>
                             </div>
                         </div>
                     </Link>    

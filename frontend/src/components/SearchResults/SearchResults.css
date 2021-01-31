@@ -1,7 +1,8 @@
-.search__results {
-
+.search__wrapper {
+    display: flex;
+    text-align: center;
 }
 
-.search__wrapper {
-    
+h2 {
+    padding: 40px;
 }
