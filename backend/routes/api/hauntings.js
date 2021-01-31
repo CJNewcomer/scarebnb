@@ -7,19 +7,20 @@ const asyncHandler = require('express-async-handler');
 
 router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
     const id = parseInt(req.params.id, 10);
-    console.log(id)
+    // console.log(id)
     const haunting = await Haunting.findOne({
         where: {
             id,
         }
     });
-    console.log(haunting)
+    // console.log(haunting)
     res.json({haunting});
 }));
 
 router.get('/', asyncHandler(async(req, res) => {
-    const hauntings = await Haunting.findAll({ limit: 4 });
-    res.json(hauntings);
+    const hauntings = await Haunting.findAll();
+    // console.log(hauntings);
+    res.json({hauntings});
 })),
 
 
