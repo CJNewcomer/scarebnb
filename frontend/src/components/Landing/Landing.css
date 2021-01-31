@@ -9,6 +9,7 @@ div.main ::after {
     content: "";
     background: url("https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-us.s3.amazonaws.com%2F86be13f0-e59f-11e9-9743-db5a370481bc?fit=scale-down&source=next&width=700");
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     width: 100%;

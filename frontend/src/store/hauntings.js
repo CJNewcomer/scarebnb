@@ -22,15 +22,14 @@ export const getHauntingsProfile = (id) => async (dispatch) => {
     }
 }
 
-export const grabHauntings = (query) => async (dispatch) => {
-    const response = await fetch(`/api/hauntings/${query}`);
-    const hauntings = response.data.hauntings;
-    await fetch('/api/hauntings/search', {
-        method: 'POST',
-        body: JSON.stringify({ hauntings }),
-    });
-    dispatch(getHauntingsProfile());
-};
+// export const grabHauntings = (query) => async (dispatch) => {
+//     const response = await fetch(`/api/hauntings/${query}`, 
+//     {
+//         method: 'POST',
+//         body: JSON.stringify({ response.data.hauntings }),
+//     });
+//     dispatch(getHauntingsProfile());
+// };
 
 export const getMultipleHauntings = () => async (dispatch) => {
     console.log('Thunk running')
@@ -48,15 +47,7 @@ export const getMultipleHauntings = () => async (dispatch) => {
 // onLoad - dispatch Thunk - grabs multiple hauntings
 // update hautnings slice of state to add multiple
 
-const initialState = {
-    // 1: 
-    //     {
-    //     id: 2,
-    //     imgPath: "https://reactsolobucket.s3.us-east-2.amazonaws.com/images/Buckner_1.png",
-    //     locationName: "Buckner Mansion",
-    //     price: 500,
-    //     }
-};
+const initialState = {};
 
 const hauntingsReducer = (state = initialState, action) => {
     const newState = Object.assign({}, state);

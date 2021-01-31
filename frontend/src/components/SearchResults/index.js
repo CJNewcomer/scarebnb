@@ -1,33 +1,39 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-
-import HauntingProfile from '../HauntingProfile';
-
-import { grabHauntings } from '../../store/hauntings';
+import { id } from 'date-fns/locale';
+import React, {useEffect} from 'react';
+import { useDispatch, useSelector} from 'react-redux';
+import { useLocation, Link } from 'react-router-dom';
+import { getMultipleHauntings } from '../../store/hauntings';
 
 const SearchResults = () => {
     const dispatch = useDispatch();
     const location = useLocation();
-    const query = location.search.split('='[1]);
+    const query = location.search.split('=')[1];
 
     const hauntings = useSelector((state) => state.hauntings);
-    const similarMatch = Object.values(hauntings).filter(haunting => haunting.name.toLowerCase().includes(query.toLowerCase()));
+    const similarMatch = Object.values(hauntings).filter(haunting => haunting.locationName.toLowerCase().includes(query.toLowerCase()));
+    console.log(similarMatch);
 
-    if (!similarMatch) {
-        dispatch(grabHauntings(query));
-    }
-
+    useEffect(() => {
+        dispatch(getMultipleHauntings())
+    }, [dispatch])
    
     return (
         <div className='search__wrapper'>
             <div className='search__results'>
                 <h2>Search Results</h2>
-                {similarMatch.map(haunting => (
-                    <div key={haunting.id}>
-                        <HauntingProfile haunting={haunting} />
-                    </div>
-                ))}
+                {similarMatch.map(haunting => {
+                    const { id, imgPath, locationName, price } = haunting;
+                return (
+                    <Link to={`/hauntings/${id}`}>
+                        <div className='card'>
+                            <img src={imgPath} alt="" />
+                            <div className="card__info">
+                                <h2>{locationName}</h2>
+                                <h3>{price}</h3>
+                            </div>
+                        </div>
+                    </Link>    
+                )})}
             </div>    
         </div>
     )
