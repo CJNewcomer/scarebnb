@@ -8,6 +8,7 @@ function HauntingCard() {
     const dispatch = useDispatch();
     // const {id} = useParams();
     const hauntingCard = useSelector((state) => Object.values(state.hauntings));
+    console.log(hauntingCard)
 
     useEffect(() => {
         dispatch(getMultipleHauntings())

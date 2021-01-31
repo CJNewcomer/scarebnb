@@ -40,11 +40,6 @@ body {
     flex-direction: column;
 }
 
-.navbar__right {
-    display: flex;
-    justify-content: space-between;
-}
-
 .navbar__wrapper {
     display:flex;
 }
@@ -52,6 +47,15 @@ body {
 .navbar__home {
     display: flex;
     align-items: center;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 3px; 
+    font-size: 30px;
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .navbar__links {

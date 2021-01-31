@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
-import HauntingProfile from '../HauntingProfile/index';
+import HauntingProfile from '../HauntingProfile';
 
 import { grabHauntings } from '../../store/hauntings';
 
@@ -21,7 +21,7 @@ const SearchResults = () => {
    
     return (
         <div className='search__wrapper'>
-            <div className='search__container'>
+            <div className='search__results'>
                 <h2>Search Results</h2>
                 {similarMatch.map(haunting => (
                     <div key={haunting.id}>

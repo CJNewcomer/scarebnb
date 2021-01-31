@@ -6,7 +6,6 @@ function Landing() {
         <>
             <div className="main">
                 <div className='main__layout'>
-                <h1>Paranormal awaits...</h1>
                 {/* <HauntingCard /> */}
                 </div>   
             </div>

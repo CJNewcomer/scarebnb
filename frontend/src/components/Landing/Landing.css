@@ -22,11 +22,7 @@ div.main ::after {
 }
 
 .main__layout {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
-h1 {
-    font-family: 'Playfair Display SC', serif;
-    letter-spacing: 2px; 
-    font-size: 40px;
-}
+

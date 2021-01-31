@@ -25,7 +25,7 @@ export const getHauntingsProfile = (id) => async (dispatch) => {
 export const grabHauntings = (query) => async (dispatch) => {
     const response = await fetch(`/api/hauntings/${query}`);
     const hauntings = response.data.hauntings;
-    await fetch('/api/hauntings/searchresults', {
+    await fetch('/api/hauntings/search', {
         method: 'POST',
         body: JSON.stringify({ hauntings }),
     });
@@ -36,7 +36,7 @@ export const getMultipleHauntings = () => async (dispatch) => {
     console.log('Thunk running')
     const res = await fetch(`/api/hauntings`);
     if (res.ok) {
-        dispatch(displayMultipleHauntings(res.data));
+        dispatch(displayMultipleHauntings(res.data.hauntings));
         return res;
     }
 }
