@@ -22,15 +22,17 @@ function HauntingCard() {
             { hauntingCards.map(hauntingCard => {
                 const { id, imgPath, locationName, price } = hauntingCard;
                 return (
-                    <Link to={`/hauntings/${id}`}>
-                        <div className='card'>
-                            <img src={imgPath} alt="" />
-                            <div className="card__info">
-                                <h2>{locationName}</h2>
-                                <h3>{price}</h3>
+                    <div className='card__container'>
+                        <Link to={`/hauntings/${id}`}>
+                            <div className='card'>
+                                <img src={imgPath} alt="" />
+                                <div className="card__info">
+                                    <h2>{locationName}</h2>
+                                    <h3>{price}</h3>
+                                </div>
                             </div>
-                        </div>
-                    </Link>    
+                        </Link>
+                    </div>        
                 )
             })}
         </>

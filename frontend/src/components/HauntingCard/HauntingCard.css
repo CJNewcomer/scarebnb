@@ -1,21 +1,29 @@
+
 .card {
   margin: 30px;
   border-radius: 10px;
   overflow: hidden;
+  width: 350px;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
   transition: transform 100ms ease-in;
   cursor: pointer;
 }
-/* 
-.card:hover {
-  transform:s;
-} */
+
+a:visted {
+  text-decoration: none;
+  color: black;
+}
+
+a:active, a:link {
+  text-decoration: none;
+  color: black;
+}
 
 .card > img {
-  object-fit: fill;
+  object-fit: cover;
   min-width: 300px;
   min-height: 200px;
-  width: 400px;
+  width: 350px;
 }
 
 .card__info {
@@ -24,6 +32,8 @@
     padding: 20px;
     padding-top: 20px;
     border: 1;
+    text-decoration: none;
+    color: black;
   }
 
 .card__info > h2 {
