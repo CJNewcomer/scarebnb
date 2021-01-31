@@ -20,12 +20,13 @@ body {
     background-color: whitesmoke;
     z-index: 100;
     display: block;
-    position: fixed;
-  
+    position: fixed;  
 }
 
-.navbar__home {
- 
+.navbar__left-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar__button {
@@ -34,22 +35,35 @@ body {
     border-radius: 5px;
 }
 
-i {
-   
+.navbar__right-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.navbar__login {
+.navbar__right {
     display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    padding-right: 10px; 
+    justify-content: space-between;
 }
 
-.navbar__signup {
+.navbar__wrapper {
+    display:flex;
+}
+
+.navbar__home {
     display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    padding-right: 10px;
+    align-items: center;
+}
+
+.navbar__links {
+    display: flex;
+}
+
+.navbar__middle-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80;
+    z-index: 99;
 }
 
 .footer {

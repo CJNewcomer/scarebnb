@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal'; 
 import SignUpFormModal from '../SignupFormModal';
+import SearchBar from '../SearchBar';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
@@ -10,38 +11,38 @@ function Navigation({ isLoaded }) {
     let sessionLinks;
     
     if (sessionUser) {
-        sessionLinks = (
-            <div>
-                <ProfileButton user={sessionUser} />
-            </div>
-        );
+        sessionLinks = <ProfileButton user={sessionUser} />;
     } else {
-            <div className='.navbar__home'>
-                <a className='home' href='/'>
-                    <i class="fas fa-house-damage"></i>
-                </a>
-            </div>
-
         sessionLinks = (
-            <>
-                <div className='navbar__login'>
-                        <LoginFormModal /> 
-                </div>
-                <div className='navbar__signup'>
+            <li className='navbar__right-container'>
+                <ul className='navbar__links'>
+                    <div>
+                         <LoginFormModal /> 
+                    </div>
+                    <div>
                         <SignUpFormModal />
-                </div> 
-            </>  
+                    </div>
+                </ul>
+                <div className='navbar__middle-container'>
+                    <SearchBar />
+                </div>
+            </li>
         );
     }
 
     return (
-    
-        <div className='nav__container'>
-            
-            {isLoaded && sessionLinks}
-                
-        </div>       
-        
+        <>
+            <nav className='navbar__left-container'>
+                <ul className='navbar__right'>
+                    <div className='navbar__wrapper'>
+                        <li className='navbar__home'>
+                            <a href='/'>Home</a>
+                        </li>
+                    </div>
+                        {isLoaded && sessionLinks}
+                </ul>
+            </nav>
+        </>        
     );    
 }
 

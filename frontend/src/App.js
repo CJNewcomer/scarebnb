@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
 import HauntingProfile from './components/HauntingProfile';
+import SearchResults from './components/SearchResults';
 import './index.css';
 
 
@@ -34,8 +35,11 @@ function App() {
           <Route path="/hauntings/:id" >
             <HauntingProfile />
           </Route>
+          <Route path="/search">
+            <SearchResults />
+          </Route>
           <Route>
-            404 - Page Not Found
+            <h2>Page Not Found</h2>
           </Route>
         </Switch>
        <Footer /> 
