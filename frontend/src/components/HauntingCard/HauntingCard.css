@@ -1,11 +1,16 @@
+.card__container {
+  width: 350px;
+  background-color: whitesmoke;
+  margin: 30px;
+  border-radius: 10px;
+  height: min-content;
+}
 
 .card {
-  margin: 30px;
   border-radius: 10px;
   overflow: hidden;
   width: 350px;
   box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
-  transition: transform 100ms ease-in;
   cursor: pointer;
 }
 
@@ -22,7 +27,7 @@ a:active, a:link {
 .card > img {
   object-fit: cover;
   min-width: 300px;
-  min-height: 200px;
+  max-height: 200px;
   width: 350px;
 }
 
@@ -44,6 +49,5 @@ a:active, a:link {
 .card__info > h3 {
   font-size: 14px;
   font-weight: 300;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin: auto;
 }

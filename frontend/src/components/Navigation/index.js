@@ -25,7 +25,7 @@ function Navigation({ isLoaded }) {
                     </div>
                 </ul>
                 <div className='navbar__middle-container'>
-                    <SearchBar />
+                    {/* <SearchBar /> */}
                 </div>
             </li>
         );
@@ -41,6 +41,7 @@ function Navigation({ isLoaded }) {
                             </NavLink>
                         </li>
                 </div>
+                <SearchBar />
                 {isLoaded && sessionLinks}
             </nav>
         </>        

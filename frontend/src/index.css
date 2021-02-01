@@ -16,7 +16,7 @@ body {
     margin: auto;
     width: 100%;
     top: 0;
-    height: 65px;
+    height: 45px;
     background-color: whitesmoke;
     z-index: 100;
     display: block;
@@ -26,7 +26,8 @@ body {
 .navbar__left-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
+    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);  
 }
 
 .navbar__button {
@@ -52,7 +53,7 @@ body {
 h1 {
     font-family: 'Playfair Display SC', serif;
     letter-spacing: 3px; 
-    font-size: 30px;
+    font-size: 35px;
     color: #333333;
     cursor: pointer;
     text-decoration: none;
@@ -63,11 +64,8 @@ h1 {
 }
 
 .navbar__middle-container {
-    position: absolute;
-    top: 0;
+    display: flex;
     width: 100%;
-    height: 80;
-    z-index: 99;
 }
 
 .footer {

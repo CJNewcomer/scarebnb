@@ -1,12 +1,9 @@
 .search__container {
     display: flex;
-    align-items: center;
-    border-width: 1;
-    border-color: gray;
+    align-content: center;
+    border: 0.5px solid #333333;
+    border-radius: 5px;
     background-color: whitesmoke;
-    box-shadow: rgba(0,0,0,0.1);
-    border-radius: 3;
-    height: 40;
 }
 
 .search__text {

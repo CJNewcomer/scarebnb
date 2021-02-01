@@ -9,7 +9,7 @@ function HauntingCard() {
     const dispatch = useDispatch();
     // const {id} = useParams();
     const landingPageCards = useSelector((state) => Object.values(state.hauntings));
-    const hauntingCards = landingPageCards.slice(0, 4);
+    const hauntingCards = landingPageCards.slice(1, 9);
     // console.log(hauntingCards)
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function HauntingCard() {
     return (
         <>    
             { hauntingCards.map(hauntingCard => {
-                const { id, imgPath, locationName, price } = hauntingCard;
+                const { id, imgPath, locationName, city, state, price } = hauntingCard;
                 return (
                     <div className='card__container'>
                         <Link to={`/hauntings/${id}`}>
@@ -28,7 +28,8 @@ function HauntingCard() {
                                 <img src={imgPath} alt="" />
                                 <div className="card__info">
                                     <h2>{locationName}</h2>
-                                    <h3>{price}</h3>
+                                    <h3>{city}, {state}</h3>
+                                    <h3>{price} / Night </h3>
                                 </div>
                             </div>
                         </Link>

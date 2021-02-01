@@ -1,8 +1,16 @@
 .search__wrapper {
-    display: flex;
-    text-align: center;
+    display: table;
+    width: 80%;
+    height: 100%;
+    margin-left: 30px; 
 }
 
-h2 {
-    padding: 40px;
+p.search__results {
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    text-decoration-color: #333333;
 }
+
+

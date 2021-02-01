@@ -3,6 +3,7 @@ import { useDispatch, useSelector} from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 import { getMultipleHauntings } from '../../store/hauntings';
 import { useSearchContext } from '../context/SearchContext';
+import './SearchResults.css';
 
 const SearchResults = () => {
     const dispatch = useDispatch();
@@ -11,7 +12,6 @@ const SearchResults = () => {
 
     const hauntings = useSelector((state) => state.hauntings);
     const similarMatch = Object.values(hauntings).filter(haunting => haunting.locationName.toLowerCase().includes(query.toLowerCase()));
-    console.log(similarMatch);
 
     useEffect(() => {
         dispatch(getMultipleHauntings())
@@ -26,8 +26,8 @@ const SearchResults = () => {
 
     return (
         <div className='search__wrapper'>
-            <div className='search__results'>
-                <h2>Search Results</h2>
+            <div>
+                <p className='search__results'>Search Results</p>
                 {similarMatch.map(haunting => {
                     const { id, imgPath, locationName, price } = haunting;
                 return (
