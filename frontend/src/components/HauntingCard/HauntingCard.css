@@ -1,4 +1,5 @@
 .card__container {
+  display: flex;
   width: 350px;
   background-color: whitesmoke;
   margin: 30px;
@@ -27,7 +28,7 @@ a:active, a:link {
 .card > img {
   object-fit: cover;
   min-width: 300px;
-  max-height: 200px;
+  height: 200px;
   width: 350px;
 }
 

@@ -9,7 +9,8 @@ function HauntingCard() {
     const dispatch = useDispatch();
     // const {id} = useParams();
     const landingPageCards = useSelector((state) => Object.values(state.hauntings));
-    const hauntingCards = landingPageCards.slice(1, 9);
+    const randomNumber = Math.floor(Math.random()*32)
+    const hauntingCards = landingPageCards.slice(randomNumber, (randomNumber + 8));
     // console.log(hauntingCards)
 
     useEffect(() => {
@@ -22,7 +23,7 @@ function HauntingCard() {
             { hauntingCards.map(hauntingCard => {
                 const { id, imgPath, locationName, city, state, price } = hauntingCard;
                 return (
-                    <div className='card__container'>
+                    <div className='card__container' key={id}>
                         <Link to={`/hauntings/${id}`}>
                             <div className='card'>
                                 <img src={imgPath} alt="" />

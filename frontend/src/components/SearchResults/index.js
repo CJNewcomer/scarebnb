@@ -26,13 +26,13 @@ const SearchResults = () => {
 
     return (
         <div className='search__wrapper'>
-            <div>
-                <p className='search__results'>Search Results</p>
+            <p className='search__results'>Search Results</p>
+            <div className='search'>
                 {similarMatch.map(haunting => {
                     const { id, imgPath, locationName, price } = haunting;
                 return (
                     <Link to={`/hauntings/${id}`}>
-                        <div className='card'>
+                        <div className='card' style={{marginBottom: '20px'}}>
                             <img src={imgPath} alt="" />
                             <div className="card__info">
                                 <h2>{locationName}</h2>

@@ -1,8 +1,9 @@
 .search__wrapper {
-    display: table;
+    /* display: table; */
     width: 80%;
+    margin: auto;
     height: 100%;
-    margin-left: 30px; 
+    /* margin-left: 30px;  */
 }
 
 p.search__results {
@@ -13,4 +14,9 @@ p.search__results {
     text-decoration-color: #333333;
 }
 
+div.search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
