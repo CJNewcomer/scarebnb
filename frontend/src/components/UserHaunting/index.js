@@ -1,7 +1,9 @@
 
 function UserHaunting() {
     return (
-        
+        <div>
+            
+        </div>
     )
 }
 

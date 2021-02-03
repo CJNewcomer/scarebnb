@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Landing from './components/Landing';
 import HauntingProfile from './components/HauntingProfile';
 import SearchResults from './components/SearchResults';
+import UserHauntings from './components/UserHaunting';
 import './index.css';
 
 
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/hauntings/:id" >
             <HauntingProfile />
+          </Route>
+          <Route>
+            
           </Route>
           <Route path="/search">
             <SearchResults />
