@@ -16,7 +16,7 @@ module.exports = {
           state: 'VT', 
           country: 'United States', 
           description: 'Newly renovated by the Deets family, this modern architectural wonder will leave you saying "Beetleguise, Beetleguise, Beetleguise!"  Featuring a dining room with enough space to host a conga line, a family room with exotic plants and a roaring fireplace, and a miniature replica of the entire quaint town in Connecticut.', 
-          imgPath: 'https://reactsolobucket.s3.us-east-2.amazonaws.com/images/Beetlejuice_1.png', 
+          imgPath: (['https://reactsolobucket.s3.us-east-2.amazonaws.com/images/Beetlejuice_1.png', 'https://reactsolobucket.s3.us-east-2.amazonaws.com/Beetlejuice_2.png', 'https://reactsolobucket.s3.us-east-2.amazonaws.com/Beetlejuice_3.png', 'https://reactsolobucket.s3.us-east-2.amazonaws.com/Beetlejuice_4.png', 'https://reactsolobucket.s3.us-east-2.amazonaws.com/Beetlejuice_5.png']), 
           price: 250
         },
         { 
