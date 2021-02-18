@@ -11,9 +11,7 @@ function HauntingProfile() {
     const [showCalendar, setShowCalendar] = useState(false);
 
     const openCalendar = () => {
-        // console.log('running?')
         if (showCalendar) return;
-        // console.log('running yet?')
         setShowCalendar(true) 
     };
 
@@ -30,7 +28,7 @@ function HauntingProfile() {
     }, [showCalendar]);
 
     const haunting = useSelector(state => state.hauntings[id])
-    // console.log(showCalendar)
+   
     
     useEffect(() => {
         dispatch(getHauntingsProfile(id))
