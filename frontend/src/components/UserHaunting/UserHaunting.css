@@ -1,0 +1,46 @@
+.form__container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    background-color: #333;
+}
+
+.form__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form__title {
+    color: #333;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 25px;
+    align-self: center;
+    margin-top: -.5rem;
+    letter-spacing: 1.2px;
+}
+
+.error-list {
+    margin: auto;
+    list-style: none;
+    color: rgb(143, 18, 18);
+    text-align: center;
+    padding: .5rem rem;
+}
+
+.form__input {
+    margin: .2rem;
+}
+
+.form__button-container {
+    align-self: center;
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+.form__button {
+    padding: .7rem;
+	background-color: #333;
+	border-radius: 5px;
+	border: none;
+}
