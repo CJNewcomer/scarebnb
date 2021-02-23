@@ -37,7 +37,7 @@ module.exports = {
         allowNull: false,
       },
       imgPath: {
-        type: Sequelize.ENUM,
+        type: Sequelize.STRING,
         allowNull: false,
       },
       createdAt: {
