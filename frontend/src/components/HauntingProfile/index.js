@@ -1,36 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import { getHauntingsProfile } from '../../store/hauntings';
-import BookingDates from '../BookingDates';
+import CreateUserHauntingModal from '../CreateUserHaunting/index';
 import './HauntingProfile.css';
 
 function HauntingProfile() {
     const dispatch = useDispatch();
     const {id} = useParams();
-    const [showCalendar, setShowCalendar] = useState(false);
-
-    const openCalendar = () => {
-        // console.log('running?')
-        if (showCalendar) return;
-        // console.log('running yet?')
-        setShowCalendar(true) 
-    };
-
-    useEffect(() => {
-        if (!showCalendar) return;
-
-        const closeMenu = () => {
-            setShowCalendar(false);
-        };
-
-        document.addEventListener('click', closeMenu);
-
-        return () => document.removeEventListener('click', closeMenu);
-    }, [showCalendar]);
 
     const haunting = useSelector(state => state.hauntings[id])
-    // console.log(showCalendar)
     
     useEffect(() => {
         dispatch(getHauntingsProfile(id))
@@ -49,11 +28,8 @@ function HauntingProfile() {
                     <h3>{city}, {state} {country}</h3>
                     <h4 className='price'>{price} / Night </h4>
                     <h4 className='description'>{description}</h4>
-                    <div className="book__now">
-                        <button onClick={openCalendar}>Book
-                            <i className="fas fa-book-dead"></i>Now
-                        </button>
-                    {showCalendar && <BookingDates /> } 
+                    <div> 
+                        <CreateUserHauntingModal />
                     </div>  
                 </div>    
             </div>   
