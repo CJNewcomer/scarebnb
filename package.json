@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/CJNewcomer/scarebnb/issues"
   },
-  "homepage": "https://github.com/CJNewcomer/scarebnb#readme"
+  "homepage": "https://github.com/CJNewcomer/scarebnb#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

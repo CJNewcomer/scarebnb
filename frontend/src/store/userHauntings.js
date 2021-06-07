@@ -1,6 +1,14 @@
 import { fetch } from './csrf';
 
-const SET_USERHAUNTINGS = 'userHauntings/SET_USERHAUNTINGS';
+const CREATE_USERHAUNTINGS = 'userHauntings/createUserHauntings';
+const SET_USERHAUNTINGS = 'userHauntings/setUserHauntings';
+
+export const createUserHauntings = (userHaunting) => {
+    return {
+        type: CREATE_USERHAUNTINGS,
+        payload: userHaunting,
+    }
+}
 
 export const setUserHauntings = (payload) => ({
     type: SET_USERHAUNTINGS,
@@ -8,12 +16,28 @@ export const setUserHauntings = (payload) => ({
 });
 
 export const getUserHauntings = () => async (dispatch) => {
-    console.log('Booking Thunk running')
     const res = await fetch(`/api/userhauntings`);
     if (res.ok) {
         dispatch(setUserHauntings(res.data.userHaunting))
         return res;
     }
+}
+
+export const userHauntingCreate = (userHaunting) => async (dispatch) => {
+    const { sessionUser, bookingStartDate, bookingEndDate } = userHaunting;
+    const today = new Date()
+    today.setTime(0,0)
+    const response = await fetch('/api/userHauntings', {
+        method: 'POST',
+        body: JSON.stringify({
+            ownerId: sessionUser.id,
+            bookingStartDate,
+            bookingEndDate,
+            active: (((bookingStartDate <= today) && (bookingEndDate >= today)) || (!bookingStartDate && !bookingEndDate))
+        }),
+    });
+    dispatch(createUserHauntings(response.data.userHaunting))
+    return response
 }
 
 const initialState = {};
