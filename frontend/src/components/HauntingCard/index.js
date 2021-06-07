@@ -7,11 +7,11 @@ import './HauntingCard.css';
 
 function HauntingCard() {
     const dispatch = useDispatch();
-    // const {id} = useParams();
+
     const landingPageCards = useSelector((state) => Object.values(state.hauntings));
     const randomNumber = Math.floor(Math.random()*32)
     const hauntingCards = landingPageCards.slice(randomNumber, (randomNumber + 8));
-    // console.log(hauntingCards)
+   
 
     useEffect(() => {
         dispatch(getMultipleHauntings())
