@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
+import CreateUserHauntingModal from '../UserHaunting/CreateUserHauntingModal'
 import LoginFormModal from '../LoginFormModal'; 
 import SignUpFormModal from '../SignupFormModal';
 import SearchBar from '../SearchBar';
@@ -12,7 +13,12 @@ function Navigation({ isLoaded }) {
     let sessionLinks;
     
     if (sessionUser) {
-        sessionLinks = <ProfileButton user={sessionUser} />;
+        sessionLinks = (
+            <>
+                <CreateUserHauntingModal />
+                <ProfileButton user={sessionUser} />
+            </>
+        );
     } else {
         sessionLinks = (
             <li className='navbar__right-container'>

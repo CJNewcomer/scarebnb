@@ -10,9 +10,9 @@ export const createUserHauntings = (userHaunting) => {
     }
 }
 
-export const setUserHauntings = (payload) => ({
+export const setUserHauntings = (hauntings) => ({
     type: SET_USERHAUNTINGS,
-    payload,
+    hauntings,
 });
 
 export const getUserHauntings = () => async (dispatch) => {
@@ -45,6 +45,9 @@ const initialState = {};
 const userHauntingsReducer = (state = initialState, action) => {
     const newState = Object.assign({}, state);
     switch (action.type) {
+        case CREATE_USERHAUNTINGS:
+            newState[action.payload.id] = action.payload;
+            return newState;
         case SET_USERHAUNTINGS:
             newState[action.payload] = action.payload;
             return newState;
