@@ -14,7 +14,6 @@ export const displayMultipleHauntings = (payload) => ({
 });
 
 export const getHauntingsProfile = (id) => async (dispatch) => {
-    // console.log('Thunk running')
     const res = await fetch(`/api/hauntings/${id}`);
     if (res.ok) {
         dispatch(setHauntingsProfile(res.data.haunting))
@@ -22,30 +21,13 @@ export const getHauntingsProfile = (id) => async (dispatch) => {
     }
 }
 
-// export const grabHauntings = (query) => async (dispatch) => {
-//     const response = await fetch(`/api/hauntings/${query}`, 
-//     {
-//         method: 'POST',
-//         body: JSON.stringify({ response.data.hauntings }),
-//     });
-//     dispatch(getHauntingsProfile());
-// };
-
 export const getMultipleHauntings = () => async (dispatch) => {
-    console.log('Thunk running')
     const res = await fetch(`/api/hauntings`);
     if (res.ok) {
         dispatch(displayMultipleHauntings(res.data.hauntings));
         return res;
     }
 }
-
-
-
-// hold everything that you want to display on the page at the time
-// multiple hauntings - store multiple in slice of state
-// onLoad - dispatch Thunk - grabs multiple hauntings
-// update hautnings slice of state to add multiple
 
 const initialState = {};
 
